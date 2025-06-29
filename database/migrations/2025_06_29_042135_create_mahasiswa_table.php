@@ -16,8 +16,10 @@ return new class extends Migration
             $table->string('nim')->unique();
             $table->unsignedInteger('nik')->unique();
             $table->string('avatar_path')->nullable();
+            $table->string('google_id')->nullable()->unique();
             $table->string('nama');
             $table->string('email')->unique();
+            $table->string('password')->nullable();
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
             $table->enum('jenis_kelamin', ['Laki-Laki', 'Perempuan']);
@@ -31,6 +33,8 @@ return new class extends Migration
             $table->foreignId('dosen_pembimbing_1_id')->nullable()->constrained('users')->onDelete('set null');
             $table->foreignId('dosen_pembimbing_2_id')->nullable()->constrained('users')->onDelete('set null');
             $table->foreignId('dosen_pembimbing_pkl_id')->nullable()->constrained('users')->onDelete('set null');
+            $table->timestamp('email_verified_at')->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
     }
