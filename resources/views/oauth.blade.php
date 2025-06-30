@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SISFO &mdash; Politeknik Negeri Jember</title>
+    <link rel="icon" href="{{ asset('polije-logo-single.png') }}" type="image/png" />
     @vite(['resources/css/app.css', 'resources/css/login.css', 'resources/js/login.js', 'resources/js/app.js'])
 </head>
 
