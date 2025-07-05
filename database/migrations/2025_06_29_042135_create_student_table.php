@@ -29,9 +29,9 @@ return new class extends Migration
             $table->foreignId('study_program_id')->constrained('study_program')->onDelete('cascade');
             $table->foreignId('generation_id')->constrained('generation')->onDelete('cascade');
             $table->foreignId('group_id')->constrained('group')->onDelete('cascade');
-            $table->foreignId('dosen_wali_id')->nullable()->constrained('users')->onDelete('set null');
-            $table->foreignId('dosen_pembimbing_1_id')->nullable()->constrained('users')->onDelete('set null');
-            $table->foreignId('dosen_pembimbing_2_id')->nullable()->constrained('users')->onDelete('set null');
+            $table->foreignId('guardian_lecturer_id')->nullable()->constrained('users')->onDelete('set null');
+            $table->foreignId('supervisor_lecturer_1_id')->nullable()->constrained('users')->onDelete('set null');
+            $table->foreignId('supervisor_lecturer_2_id')->nullable()->constrained('users')->onDelete('set null');
             $table->foreignId('dosen_pembimbing_pkl_id')->nullable()->constrained('users')->onDelete('set null');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
