@@ -27,9 +27,12 @@ class SisfoCtlPanelProvider extends PanelProvider
             ->default()
             ->id('sisfo-ctl')
             ->path('sisfo-ctl')
+            ->favicon(asset('polije-logo-single.png'))
+            ->brandName('SISFOctl - POLIJE')
+            ->passwordReset()
             ->login()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Blue,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
