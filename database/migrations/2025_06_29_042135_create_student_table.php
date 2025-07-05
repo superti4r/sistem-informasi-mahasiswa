@@ -11,24 +11,24 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mahasiswa', function (Blueprint $table) {
+        Schema::create('student', function (Blueprint $table) {
             $table->id();
             $table->string('nim')->unique();
             $table->unsignedInteger('nik')->unique();
             $table->string('avatar_path')->nullable();
             $table->string('google_id')->nullable()->unique();
-            $table->string('nama');
+            $table->string('name');
             $table->string('email')->unique();
             $table->string('password')->nullable();
-            $table->string('tempat_lahir');
-            $table->date('tanggal_lahir');
-            $table->enum('jenis_kelamin', ['Laki-Laki', 'Perempuan']);
-            $table->longText('alamat');
-            $table->unsignedInteger('nomor_handphone');
-            $table->foreignId('jurusan_id')->constrained('jurusan')->onDelete('cascade');
-            $table->foreignId('program_studi_id')->constrained('program_studi')->onDelete('cascade');
-            $table->foreignId('angkatan_id')->constrained('angkatan')->onDelete('cascade');
-            $table->foreignId('golongan_id')->constrained('golongan')->onDelete('cascade');
+            $table->string('place_of_birth');
+            $table->date('date_of_birth');
+            $table->enum('gender', ['Male', 'Female']);
+            $table->longText('address');
+            $table->unsignedInteger('number_phone');
+            $table->foreignId('major_id')->constrained('major')->onDelete('cascade');
+            $table->foreignId('study_program_id')->constrained('study_program')->onDelete('cascade');
+            $table->foreignId('generation_id')->constrained('generation')->onDelete('cascade');
+            $table->foreignId('group_id')->constrained('group')->onDelete('cascade');
             $table->foreignId('dosen_wali_id')->nullable()->constrained('users')->onDelete('set null');
             $table->foreignId('dosen_pembimbing_1_id')->nullable()->constrained('users')->onDelete('set null');
             $table->foreignId('dosen_pembimbing_2_id')->nullable()->constrained('users')->onDelete('set null');
