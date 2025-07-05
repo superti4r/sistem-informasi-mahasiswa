@@ -32,7 +32,7 @@ return new class extends Migration
             $table->foreignId('guardian_lecturer_id')->nullable()->constrained('users')->onDelete('set null');
             $table->foreignId('supervisor_lecturer_1_id')->nullable()->constrained('users')->onDelete('set null');
             $table->foreignId('supervisor_lecturer_2_id')->nullable()->constrained('users')->onDelete('set null');
-            $table->foreignId('dosen_pembimbing_pkl_id')->nullable()->constrained('users')->onDelete('set null');
+            $table->foreignId('supervisor_intern_lecturer_id')->nullable()->constrained('users')->onDelete('set null');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
