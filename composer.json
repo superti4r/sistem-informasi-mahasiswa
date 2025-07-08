@@ -7,8 +7,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "codewithdennis/filament-lucide-icons": "^4.0@beta",
-        "filament/filament": "^4.0",
+        "filament/filament": "3.3",
         "laravel/framework": "^12.0",
         "laravel/socialite": "^5.21",
         "laravel/tinker": "^2.10.1"
@@ -75,6 +74,5 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "beta",
     "prefer-stable": true
 }
